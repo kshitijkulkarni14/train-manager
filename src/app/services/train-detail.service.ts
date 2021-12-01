@@ -4,6 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Departure } from '../model/departure';
+import { Station } from '../model/station';
 
 @Injectable({
   providedIn: 'root'
@@ -37,8 +38,8 @@ export class TrainDetailService {
     )
   }
 
-  public getStations(): Observable<any> {
-    return this.http.get<any>(this.stationsUrl, {
+  public getStations(): Observable<Station[]> {
+    return this.http.get<Station[]>(this.stationsUrl, {
       headers: this.headers
     }).pipe(
       map((stations) => {
