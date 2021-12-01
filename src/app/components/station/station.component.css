@@ -1,0 +1,12 @@
+::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .center{
+    position:absolute;
+    display:block;
+    left:35%;
+    top:50%;
+    margin-top:-50px;
+    margin-left:-50px;
+}
